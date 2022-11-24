@@ -1,0 +1,154 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(57, 114, 194, 0.886) 0%, rgba(32, 36, 141, 0.89) 100%);
+}
+
+.form {
+    width: 100%;
+    max-width: 450px;
+    padding: 1.5rem;
+    background: rgba(84, 80, 216, 0.728);
+    border-radius: .8rem .2rem .8rem .2rem;
+    border: 3px solid #cce;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 2rem;
+    }
+
+    .form {
+        width: 400px;
+    }
+
+    .form h2 {
+        font-size: 1rem;
+    }
+
+}
+
+.form h2 {
+    color: #eee;
+    margin-bottom: 1rem;
+}
+
+.content-input {
+    width: 100%;
+    display: flex;
+    gap: .1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ccc;
+    padding: 0 0 1rem 0 ;
+}
+
+#city-input {
+    width: 100%;
+    padding: .5rem;
+    outline: none;
+    border: 3px solid rgba(217, 216, 223, 0.904);
+    opacity: 9;
+}
+
+#search-btn {
+    padding: .3rem .6rem;
+    min-width: 2.5rem;
+    border: 3px solid rgba(217, 216, 223, 0.904);
+    opacity: 9;
+    cursor: pointer;
+}
+
+#search-btn:hover, #city-input:focus {
+    opacity: 1;
+    transition: .3s;
+    border-color: rgba(14, 184, 227, 0.904);
+}
+
+.weather-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    gap: 2rem;
+}
+
+.weather-data-location {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#country {
+    height: 1.5rem;
+}
+
+#temperature {
+    font-size: 1.2rem;
+}
+
+.conditions {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+#weather-condition {
+    text-transform: capitalize;
+}
+
+.humidity-winds-conditions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#icon {
+    height: 3rem;
+    width: 3rem;
+}
+
+#humidity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-right: 2rem;
+    border-right: 5px solid #cdc;
+    padding: 2rem;
+}
+
+#windy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Utilities */
+
+.hide {
+    display: none;
+}
+
+.error::placeholder {
+    color: #f00;
+}
