@@ -19,10 +19,9 @@ const containerWeather = document.querySelector('.weather-data');
 const getWheaterDatas = async (city) => {
 
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`
-
     const res = await fetch(apiUrl);
     const data = await res.json();
-    
+
     return data;
 };
 
@@ -37,17 +36,13 @@ const showWheaterDatas = async (city) => {
     iconElement.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
     humidityElement.innerText = `${data.main.humidity}%`;
     windyElement.innerText = `${parseInt(data.wind.speed)}km/h`;
-
     containerWeather.classList.remove('hide');
-    console.log(data);
 
+    console.log(data);
 };
 
-
 // Eventos
-
 btnSearch.addEventListener('click', (e) => {
-
     e.preventDefault();
 
     const city = cityInput.value;
