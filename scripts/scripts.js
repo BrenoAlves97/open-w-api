@@ -2,9 +2,11 @@
 const apiFlagUrl = `https://countryflagsapi.com/png/`;
 const apiKey = `0e4f2b94b5ed4fcf7a588a25bd5d7fc3`;
 
+// Input + button
 const cityInput = document.querySelector('#city-input');
 const btnSearch = document.querySelector('#search-btn');
 
+// Elementos
 const cityElement = document.querySelector('#city-name');
 const countryElement = document.querySelector('#country');
 const temperatureElement = document.querySelector('#temperature span');
@@ -29,16 +31,25 @@ const showWheaterDatas = async (city) => {
 
     const data = await getWheaterDatas(city);
 
-    cityElement.innerText = data.name;
-    countryElement.setAttribute('src', apiFlagUrl + data.sys.country);
-    temperatureElement.innerText = parseInt(data.main.temp);
-    weatherConditionElement.innerText = data.weather[0].description;
-    iconElement.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
-    humidityElement.innerText = `${data.main.humidity}%`;
-    windyElement.innerText = `${parseInt(data.wind.speed)}km/h`;
-    containerWeather.classList.remove('hide');
+    if (data.name === undefined) {
+        alert('Cidade não encontrada, favor digitar novamente!');
+        cityInput.value = '';
+        containerWeather.classList.add('hide');
+    } else {
+        cityElement.innerText = data.name;
+        countryElement.setAttribute('src', apiFlagUrl + data.sys.country);
+        temperatureElement.innerText = parseInt(data.main.temp);
+        weatherConditionElement.innerText = data.weather[0].description;
+        iconElement.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
+        humidityElement.innerText = `${data.main.humidity}%`;
+        windyElement.innerText = `${parseInt(data.wind.speed)}km/h`;
+    
+        // Removing class Hide
+        containerWeather.classList.remove('hide');
+    
+        console.log(data);
+    }
 
-    console.log(data);
 };
 
 // Eventos
@@ -49,6 +60,7 @@ btnSearch.addEventListener('click', (e) => {
 
     if (city === '') {
         cityInput.classList.add('error');
+        containerWeather.classList.add('hide');
     } else {
         showWheaterDatas(city);
     }
