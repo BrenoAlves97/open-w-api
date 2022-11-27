@@ -1,4 +1,4 @@
-# Clima Agora!        -   ![image](https://img.shields.io/badge/under%20-development-orange)
+# Clima Agora!        -   ![image](https://img.shields.io/badge/-concluded-green)
 - Projeto no qual utiliza os serviços: Open Weather (API), country-flag (API).
 
 - Busque por alguma cidade, e ao confirmar, o recurso fetch - API, trará como respostas as informações climáticas da cidade digitada. 
