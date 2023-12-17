@@ -1,4 +1,4 @@
-# Clima Agora!        -   ![image](https://img.shields.io/badge/-concluded-green)
+# Clima Agora.
 - Projeto no qual utiliza os serviços: Open Weather (API), country-flag (API).
 
 - Busque por alguma cidade, e ao confirmar, o recurso fetch - API, trará como respostas as informações climáticas da cidade digitada. 
@@ -11,11 +11,11 @@
 <img align="center" alt="Rafa-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
 </div>
 
-# Layout inicial: 
+# Inicio: 
 
 ![image](https://user-images.githubusercontent.com/100312812/203674796-2e546541-0b1b-423a-a04f-c62e8ef60eb8.png)
 
-# Layout após a busca:
+# Busca Realizada:
 
 ![image](https://user-images.githubusercontent.com/100312812/203674923-fcd0a90e-f7be-444a-8c98-be848927f95f.png)
 
